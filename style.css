@@ -1,0 +1,134 @@
+body{
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+margin: 0;
+padding: 0;
+background-color: whitesmoke;
+font-family: serif;
+font-size: 1rem;
+color: darkolivegreen;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  list-style: none;
+}
+nav a{
+  display:block;
+  text-decoration: none;
+  background-color: #CACB76;
+  padding: 1rem;
+} 
+nav a[href]{
+  color: darkolivegreen;
+}
+nav a:hover{
+    background-color:#DAE4C8;
+    color: darkolivegreen;
+    text-decoration: underline;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    margin-bottom: 1rem;
+    border: 2px solid darkolivegreen;
+    background: darkolivegreen;
+} 
+h2{
+    color: darkolivegreen;
+    font-size: 1.5rem;
+} h3{
+    color: darkolivegreen;
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+main{
+    margin: 1rem;
+    padding: 1rem;
+}
+#home, #ratings, #stays, #resources{
+  margin-bottom: 3rem;
+  border-top: 3px solid darkolivegreen;
+}
+.info{
+  flex: 1 1 200px;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  border: 3px solid darkolivegreen;
+  background: #DAE4C8;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+img{
+    display: block;
+    box-sizing:border-box;
+    width: 100%;
+    height: auto;
+    border: 3px solid darkolivegreen;
+}
+a[href]{
+    color: darkolivegreen;
+}
+footer a[href] {
+    color: #CACB76;
+}
+footer{
+  padding: 1rem;
+  text-align: center;
+  background-color: darkolivegreen;
+  color: whitesmoke;
+}
+@media screen and (min-width:700px) {
+     h1 {
+        font-size: 2.75rem;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+    nav a {
+        padding: 1rem 1.5rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "home home"
+            "ratings resources"
+            "stays stays";
+        column-gap: 2rem;
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+    #home{ 
+        grid-area: home;
+    }
+    #ratings{ 
+        grid-area: ratings; 
+    }
+    #resources{ 
+        grid-area: resources; 
+    }
+    #stays{ 
+        grid-area: stays;
+    }
+}
+@media screen and (min-width: 1000px) {
+    body {
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+    nav ul {
+        justify-content: center;
+    }
+}
